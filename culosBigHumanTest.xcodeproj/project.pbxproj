@@ -17,6 +17,7 @@
 		9620C56E1C3B7EAF00362790 /* ccbhInstagramCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620C56D1C3B7EAF00362790 /* ccbhInstagramCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9620C5711C3B7ED300362790 /* ccBHImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620C5701C3B7ED300362790 /* ccBHImagesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9620C5731C3D979500362790 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9620C5721C3D979500362790 /* Social.framework */; };
+		9620C5771C3DB5F700362790 /* BHEye.png in Resources */ = {isa = PBXBuildFile; fileRef = 9620C5761C3DB5F700362790 /* BHEye.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9620C56F1C3B7ED300362790 /* ccBHImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccBHImagesViewController.h; sourceTree = "<group>"; };
 		9620C5701C3B7ED300362790 /* ccBHImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccBHImagesViewController.m; sourceTree = "<group>"; };
 		9620C5721C3D979500362790 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9620C5761C3DB5F700362790 /* BHEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BHEye.png; sourceTree = "<group>"; };
 		F05FF9AB69C0C20060866D3D /* Pods-culosBigHumanTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-culosBigHumanTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-culosBigHumanTest/Pods-culosBigHumanTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		9620C5551C3B700600362790 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9620C5761C3DB5F700362790 /* BHEye.png */,
 				9620C5561C3B700600362790 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9620C5651C3B700700362790 /* LaunchScreen.storyboard in Resources */,
+				9620C5771C3DB5F700362790 /* BHEye.png in Resources */,
 				9620C5621C3B700700362790 /* Assets.xcassets in Resources */,
 				9620C5601C3B700700362790 /* Main.storyboard in Resources */,
 			);

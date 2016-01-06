@@ -31,13 +31,14 @@
     FMMosaicLayout *layout = [[FMMosaicLayout alloc] init];
     
     self.collectionView.collectionViewLayout = layout;
-    [self.collectionView setContentInset:UIEdgeInsetsMake(-5, 0, 0, 0)];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.currentPaginationInfo = nil;
     
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     [self loadFeed];
     
@@ -60,16 +61,17 @@
     }];
 }
 
+
 #pragma mark COLLECTION VIEW
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout numberOfColumnsInSection:(NSInteger)section
 {
-    return 4;
+    return 3;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsZero;
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FMMosaicLayout *)collectionViewLayout interitemSpacingForSectionAtIndex:(NSInteger)section
@@ -89,7 +91,7 @@
     }
     else
     {
-        cellSize = FMMosaicCellSizeSmall / 2;
+        cellSize = FMMosaicCellSizeSmall;
     }
     
     return cellSize;
@@ -130,9 +132,8 @@
 {
     [SVProgressHUD showInfoWithStatus:@"Loading"];
     
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^
+    {    
         CALayer *layer;
         
         layer = _collectionView.layer;
@@ -143,7 +144,8 @@
         UIImage *sharedImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
             [SVProgressHUD dismiss];
             image(sharedImage);
         });
@@ -214,8 +216,6 @@
 {
     return 1;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

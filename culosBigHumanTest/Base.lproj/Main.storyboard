@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uA2-Xt-jTO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-qd-5Wf">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-qd-5Wf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,10 +27,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MG8-Y0-ZvV"/>
-                            <constraint firstAttribute="trailing" secondItem="dlR-qd-5Wf" secondAttribute="trailing" id="QML-EN-f5g"/>
-                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZI8-TT-Jbf"/>
-                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lVV-LI-edz"/>
+                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cvz-7h-fee"/>
+                            <constraint firstAttribute="trailing" secondItem="dlR-qd-5Wf" secondAttribute="trailing" id="j5H-sC-59q"/>
+                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="nx5-FO-vAQ"/>
+                            <constraint firstItem="dlR-qd-5Wf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qSG-Ph-ji3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rEI-cs-AF3"/>
@@ -54,9 +56,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-Kn-lB7">
-                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2K-Le-0mE">
+                                <rect key="frame" x="0.0" y="511" width="320" height="57"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="2bW-N4-gFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <state key="normal" title="Share With Friends">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareMenu:" destination="fA8-Lx-UGv" eventType="touchUpInside" id="Tn1-8b-GkK"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-Kn-lB7">
+                                <rect key="frame" x="11" y="83" width="298" height="298"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XyS-Kn-lB7" secondAttribute="height" multiplier="1:1" id="Ahf-cx-Ats"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GFq-5S-ZRq">
                                     <size key="itemSize" width="117" height="117"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -65,7 +85,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vXB-3i-VdW" customClass="ccbhInstagramCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="117" height="117"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
@@ -92,24 +112,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2K-Le-0mE">
-                                <rect key="frame" x="140" y="530" width="40" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Latest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpO-dO-PYz">
+                                <rect key="frame" x="0.0" y="20" width="320" height="55"/>
                                 <animations/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="shareMenu:" destination="fA8-Lx-UGv" eventType="touchUpInside" id="Tn1-8b-GkK"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="sdJ-9l-agf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="leading" secondItem="5OG-14-v1i" secondAttribute="leading" id="4N7-lq-0Ik"/>
-                            <constraint firstItem="B0c-R1-lje" firstAttribute="top" secondItem="l2K-Le-0mE" secondAttribute="bottom" constant="8" symbolic="YES" id="CcS-DF-USf"/>
-                            <constraint firstItem="l2K-Le-0mE" firstAttribute="centerX" secondItem="XyS-Kn-lB7" secondAttribute="centerX" id="CwL-ke-LQc"/>
-                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="centerY" secondItem="5OG-14-v1i" secondAttribute="centerY" id="E1A-kf-oox"/>
-                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="top" secondItem="8Yt-jL-7PW" secondAttribute="bottom" constant="60" id="NEk-SF-ziC"/>
-                            <constraint firstAttribute="trailing" secondItem="XyS-Kn-lB7" secondAttribute="trailing" id="Nmy-Lq-iwO"/>
+                            <constraint firstItem="l2K-Le-0mE" firstAttribute="trailing" secondItem="OpO-dO-PYz" secondAttribute="trailing" id="8x8-WX-GwI"/>
+                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="leading" secondItem="5OG-14-v1i" secondAttribute="leadingMargin" constant="-5" id="AjQ-hE-pLg"/>
+                            <constraint firstAttribute="trailing" secondItem="l2K-Le-0mE" secondAttribute="trailing" id="SDH-kG-G6W"/>
+                            <constraint firstItem="l2K-Le-0mE" firstAttribute="leading" secondItem="OpO-dO-PYz" secondAttribute="leading" id="X4U-tn-NSp"/>
+                            <constraint firstItem="OpO-dO-PYz" firstAttribute="centerX" secondItem="XyS-Kn-lB7" secondAttribute="centerX" id="Ztz-W9-dz7"/>
+                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="top" secondItem="OpO-dO-PYz" secondAttribute="bottom" constant="8" symbolic="YES" id="eo9-lw-h5d"/>
+                            <constraint firstItem="l2K-Le-0mE" firstAttribute="bottom" secondItem="B0c-R1-lje" secondAttribute="top" id="j7y-z3-rll"/>
+                            <constraint firstItem="OpO-dO-PYz" firstAttribute="top" secondItem="5OG-14-v1i" secondAttribute="top" constant="20" symbolic="YES" id="uCd-vO-tM5"/>
+                            <constraint firstItem="OpO-dO-PYz" firstAttribute="leading" secondItem="5OG-14-v1i" secondAttribute="leading" id="xxY-Tn-3Ci"/>
                         </constraints>
                     </view>
                     <connections>
