@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -72,27 +71,28 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-Kn-lB7">
-                                <rect key="frame" x="11" y="83" width="298" height="298"/>
+                                <rect key="frame" x="0.0" y="83" width="320" height="320"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="XyS-Kn-lB7" secondAttribute="height" multiplier="1:1" id="Ahf-cx-Ats"/>
+                                    <constraint firstAttribute="height" constant="320" id="SZI-Ip-aGu"/>
+                                    <constraint firstAttribute="width" secondItem="XyS-Kn-lB7" secondAttribute="height" multiplier="1:1" id="UKo-qE-QKc"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GFq-5S-ZRq">
-                                    <size key="itemSize" width="117" height="117"/>
+                                    <size key="itemSize" width="106" height="106"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vXB-3i-VdW" customClass="ccbhInstagramCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBi-1s-zJV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="gBi-1s-zJV" secondAttribute="height" multiplier="1:1" id="F1H-sk-5dU"/>
@@ -104,10 +104,9 @@
                                         </view>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstItem="gBi-1s-zJV" firstAttribute="leading" secondItem="vXB-3i-VdW" secondAttribute="leading" id="E8N-XM-Dsp"/>
-                                            <constraint firstAttribute="trailing" secondItem="gBi-1s-zJV" secondAttribute="trailing" id="eYo-wu-Hgg"/>
-                                            <constraint firstAttribute="bottom" secondItem="gBi-1s-zJV" secondAttribute="bottom" id="ei2-Ta-3H0"/>
-                                            <constraint firstItem="gBi-1s-zJV" firstAttribute="top" secondItem="vXB-3i-VdW" secondAttribute="top" id="iTH-qd-6wg"/>
+                                            <constraint firstItem="gBi-1s-zJV" firstAttribute="leading" secondItem="vXB-3i-VdW" secondAttribute="leading" id="GYg-IK-XjP"/>
+                                            <constraint firstItem="gBi-1s-zJV" firstAttribute="top" secondItem="vXB-3i-VdW" secondAttribute="top" id="SfH-Yp-Mzc"/>
+                                            <constraint firstAttribute="bottom" secondItem="gBi-1s-zJV" secondAttribute="bottom" id="b9A-FV-UdT"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="gBi-1s-zJV" id="C0r-RP-Dvj"/>
@@ -130,12 +129,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="l2K-Le-0mE" firstAttribute="trailing" secondItem="OpO-dO-PYz" secondAttribute="trailing" id="8x8-WX-GwI"/>
-                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="leading" secondItem="5OG-14-v1i" secondAttribute="leadingMargin" constant="-5" id="AjQ-hE-pLg"/>
+                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="leading" secondItem="OpO-dO-PYz" secondAttribute="leading" id="LXd-a8-mPL"/>
+                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="top" secondItem="OpO-dO-PYz" secondAttribute="bottom" constant="8" symbolic="YES" id="PkP-QG-gNa"/>
                             <constraint firstAttribute="trailing" secondItem="l2K-Le-0mE" secondAttribute="trailing" id="SDH-kG-G6W"/>
                             <constraint firstItem="l2K-Le-0mE" firstAttribute="leading" secondItem="OpO-dO-PYz" secondAttribute="leading" id="X4U-tn-NSp"/>
-                            <constraint firstItem="OpO-dO-PYz" firstAttribute="centerX" secondItem="XyS-Kn-lB7" secondAttribute="centerX" id="Ztz-W9-dz7"/>
-                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="top" secondItem="OpO-dO-PYz" secondAttribute="bottom" constant="8" symbolic="YES" id="eo9-lw-h5d"/>
                             <constraint firstItem="l2K-Le-0mE" firstAttribute="bottom" secondItem="B0c-R1-lje" secondAttribute="top" id="j7y-z3-rll"/>
+                            <constraint firstItem="XyS-Kn-lB7" firstAttribute="trailing" secondItem="OpO-dO-PYz" secondAttribute="trailing" id="rCR-Tw-uTV"/>
                             <constraint firstItem="OpO-dO-PYz" firstAttribute="top" secondItem="5OG-14-v1i" secondAttribute="top" constant="20" symbolic="YES" id="uCd-vO-tM5"/>
                             <constraint firstItem="OpO-dO-PYz" firstAttribute="leading" secondItem="5OG-14-v1i" secondAttribute="leading" id="xxY-Tn-3Ci"/>
                         </constraints>

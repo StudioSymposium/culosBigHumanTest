@@ -43,8 +43,8 @@
     
     [self loadFeed];
     
-    [self.view setBackgroundColor:[UIColor flatCoffeeColor]];
-    [_shareButton setBackgroundColor:[UIColor flatBlueColor]];
+    [self.view setBackgroundColor:[UIColor flatWhiteColor]];
+    [_shareButton setBackgroundColor:[UIColor flatBlackColor]];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -54,7 +54,7 @@
 
 - (void)loadFeed
 {
-    [[InstagramEngine sharedEngine] getSelfRecentMediaWithCount:20 maxId:self.currentPaginationInfo.nextMaxId success:^(NSArray<InstagramMedia *> * _Nonnull media, InstagramPaginationInfo * _Nonnull paginationInfo)
+    /*[[InstagramEngine sharedEngine] getSelfRecentMediaWithCount:20 maxId:self.currentPaginationInfo.nextMaxId success:^(NSArray<InstagramMedia *> * _Nonnull media, InstagramPaginationInfo * _Nonnull paginationInfo)
     {
         self.currentPaginationInfo = paginationInfo;
         [_imagesArray addObjectsFromArray:media];
@@ -62,6 +62,17 @@
     } failure:^(NSError * _Nonnull error, NSInteger serverStatusCode)
     {
                  NSLog(@"Error: %@", error);
+    }];*/
+    
+    
+    [[InstagramEngine sharedEngine] getMediaWithTagName:@"audi" count:20 maxId:self.currentPaginationInfo.nextMaxId withSuccess:^(NSArray<InstagramMedia *> * _Nonnull media, InstagramPaginationInfo * _Nonnull paginationInfo)
+    {
+        self.currentPaginationInfo = paginationInfo;
+        [_imagesArray addObjectsFromArray:media];
+        [_collectionView reloadData];
+    } failure:^(NSError * _Nonnull error, NSInteger serverStatusCode)
+    {
+        NSLog(@"Error:%@", error);
     }];
 }
 
