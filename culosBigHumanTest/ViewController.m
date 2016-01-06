@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "InstagramKit.h"
+#import "Chameleon.h"
 //
 #import "ccBHImagesViewController.h"
 
@@ -18,6 +19,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    [self.view setBackgroundColor:[UIColor flatBlueColor]];
     
     NSURL *authURL = [[InstagramEngine sharedEngine] authorizationURL];
     [_authView loadRequest:[NSURLRequest requestWithURL:authURL]];

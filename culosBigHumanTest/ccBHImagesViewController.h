@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 @property (nonatomic, retain) NSMutableArray *imagesArray;
 
 @end

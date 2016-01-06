@@ -9,5 +9,6 @@ pod ‘InstagramKit’, ‘~> 3.0’
 pod ‘InstagramKit/UICKeyChainStore’
 pod "FMMosaicLayout"
 pod 'SVProgressHUD'
+pod 'ChameleonFramework'
 end
 

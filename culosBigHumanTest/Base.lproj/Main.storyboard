@@ -91,9 +91,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBi-1s-zJV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBi-1s-zJV">
                                                     <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gBi-1s-zJV" secondAttribute="height" multiplier="1:1" id="F1H-sk-5dU"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <animations/>
@@ -139,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="XyS-Kn-lB7" id="XnP-AO-Hx0"/>
+                        <outlet property="shareButton" destination="l2K-Le-0mE" id="BJr-1a-lgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYH-Qo-a59" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMMosaicLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12904F8ACA44581F6056CE37D2A2B871</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3C05ACEF7293F930A038800687191A50</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4C86CDCFBDD7B951618F544A8E2CC0D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82EEBC4D96D40DCA9A490C899BAF3ACD</key>
+		<key>4D987E32DCC7573F708F687255E26B41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>612758E6E1CA01D1B30DA6B5A249B984</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E73E3AB48546D6BE7DA575365685955</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB46F6AC18D85BC6E741DC6B8B13DB5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E82EC45814B069173BD708FA0F18E1EF</key>
+		<key>F80E8C1F497A4C585CD41F60938DE09D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

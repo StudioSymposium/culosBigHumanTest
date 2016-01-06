@@ -10,6 +10,7 @@
 #import "InstagramKit.h"
 #import "FMMosaicLayout.h"
 #import "SVProgressHUD.h"
+#import "Chameleon.h"
 #import <Social/Social.h>
 //
 #import "ccbhInstagramCollectionViewCell.h"
@@ -42,6 +43,9 @@
     
     [self loadFeed];
     
+    [self.view setBackgroundColor:[UIColor flatCoffeeColor]];
+    [_shareButton setBackgroundColor:[UIColor flatBlueColor]];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -59,6 +63,17 @@
     {
                  NSLog(@"Error: %@", error);
     }];
+    
+    
+    /*[[InstagramEngine sharedEngine] getMediaWithTagName:@"bmw" count:20 maxId:self.currentPaginationInfo.nextMaxId withSuccess:^(NSArray<InstagramMedia *> * _Nonnull media, InstagramPaginationInfo * _Nonnull paginationInfo)
+    {
+        self.currentPaginationInfo = paginationInfo;
+        [_imagesArray addObjectsFromArray:media];
+        [_collectionView reloadData];
+    } failure:^(NSError * _Nonnull error, NSInteger serverStatusCode)
+    {
+        NSLog(@"Error:%@", error);
+    }];*/
 }
 
 
@@ -85,7 +100,7 @@
     
     NSUInteger randomIndex = arc4random() % [_imagesArray count];
     
-    if (randomIndex % 3)
+    if (randomIndex % 2)
     {
         cellSize = FMMosaicCellSizeBig;
     }

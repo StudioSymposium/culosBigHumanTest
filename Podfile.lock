@@ -20,6 +20,9 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ChameleonFramework (2.0.6):
+    - ChameleonFramework/Default (= 2.0.6)
+  - ChameleonFramework/Default (2.0.6)
   - FMMosaicLayout (0.1.4)
   - InstagramKit (3.7):
     - AFNetworking (~> 2.0)
@@ -33,6 +36,7 @@ PODS:
   - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - FMMosaicLayout
   - InstagramKit (~> 3.0)
   - InstagramKit/UICKeyChainStore
@@ -40,6 +44,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  ChameleonFramework: a6b466873ff9a4ce3a5196c20bccf1a97ad9f446
   FMMosaicLayout: c0febf6876c987c425d7e2176d034fa7a2c98cb5
   InstagramKit: bbbd15baeac2d32b2915d2d89319ad90bacd5912
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
