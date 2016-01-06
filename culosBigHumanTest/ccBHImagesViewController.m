@@ -63,17 +63,6 @@
     {
                  NSLog(@"Error: %@", error);
     }];
-    
-    
-    /*[[InstagramEngine sharedEngine] getMediaWithTagName:@"bmw" count:20 maxId:self.currentPaginationInfo.nextMaxId withSuccess:^(NSArray<InstagramMedia *> * _Nonnull media, InstagramPaginationInfo * _Nonnull paginationInfo)
-    {
-        self.currentPaginationInfo = paginationInfo;
-        [_imagesArray addObjectsFromArray:media];
-        [_collectionView reloadData];
-    } failure:^(NSError * _Nonnull error, NSInteger serverStatusCode)
-    {
-        NSLog(@"Error:%@", error);
-    }];*/
 }
 
 

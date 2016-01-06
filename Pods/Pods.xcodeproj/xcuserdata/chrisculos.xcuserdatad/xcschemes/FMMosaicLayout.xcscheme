@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A20B9A4A60B17FCA99E9D5CE"
+               BlueprintIdentifier = "3940EEFF92D06DB2DA8A9252"
                BuildableName = "libFMMosaicLayout.a"
                BlueprintName = "FMMosaicLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
